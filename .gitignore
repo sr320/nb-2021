@@ -1,2 +1,4 @@
 
 O_lurida/data/*fastq
+*.bt2
+O_lurida/data/Olurida_v081.fa
