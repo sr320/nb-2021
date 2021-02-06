@@ -3,3 +3,5 @@ O_lurida/data/*fastq
 *.bt2
 O_lurida/data/Olurida_v081.fa
 C_bairdi/data/cbai_genome_v1.01.fasta
+O_lurida/data/Olurida_v081-bowtie-index.rev.6.sa
+O_lurida/data/Olurida_v081-bowtie-index.rev.8.sa
