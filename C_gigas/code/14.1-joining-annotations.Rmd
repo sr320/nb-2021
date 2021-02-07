@@ -94,7 +94,7 @@ giles <- read.csv("../data/bestblast_/bestblast.tab", header = TRUE, sep = "\t")
 
 
 ```{r}
-comb-g <- left_join(comb, giles, by = c("cdsID" = "ID"))
+comb_g <- left_join(comb, giles, by = c("cdsID" = "ID"))
 ```
 
 
@@ -104,7 +104,7 @@ loc <- read.csv("../data/bestblast_/LOC_seqID_key.tab", header = FALSE, sep = "\
 
 
 ```{r}
-loc_dt <- left_join(loc, comb-g, by = c("V1" = "cdsID"))
+loc_dt <- left_join(loc, comb_g, by = c("V1" = "cdsID"))
 ```
 
 ```{r}

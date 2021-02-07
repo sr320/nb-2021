@@ -7,6 +7,7 @@ O_lurida/data/Olurida_v081-bowtie-index.rev.6.sa
 O_lurida/data/Olurida_v081-bowtie-index.rev.8.sa
 *.sam
 *.bam
-.Rproj.user
+.Rproj.use*
 *.sam
+C_gigas/.*
 C_gigas/.Rproj.user/*
