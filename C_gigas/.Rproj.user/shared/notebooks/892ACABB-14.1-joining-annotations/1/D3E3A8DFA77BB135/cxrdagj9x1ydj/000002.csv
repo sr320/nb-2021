@@ -1,1 +1,0 @@
-"0","loc <- read.csv(""../data/bestblast_/LOC_seqID_key.tab"", header = FALSE, sep = ""\t"")"

@@ -1,2 +1,0 @@
-"0","giles <- read.csv(""../data/bestblast_/bestblast.tab"", header = TRUE, sep = ""\t"") %>%"
-"0","  select(ID, HitAcc, HitDesc, E.Value)"

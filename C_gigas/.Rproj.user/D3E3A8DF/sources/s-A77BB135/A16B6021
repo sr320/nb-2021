@@ -5,15 +5,15 @@
     "dirty" : false,
     "encoding" : "UTF-8",
     "folds" : "",
-    "hash" : "476880088",
+    "hash" : "2531126655",
     "id" : "A16B6021",
-    "lastKnownWriteTime" : 1612709666,
-    "last_content_update" : 1612710801998,
+    "lastKnownWriteTime" : 1612710985,
+    "last_content_update" : 1612711536580,
     "path" : "~/Documents/GitHub/nb-2021/C_gigas/code/14.1-joining-annotations.Rmd",
     "project_path" : "code/14.1-joining-annotations.Rmd",
     "properties" : {
-        "cursorPosition" : "118,31",
-        "scrollLine" : "109"
+        "cursorPosition" : "117,0",
+        "scrollLine" : "100"
     },
     "relative_order" : 4,
     "source_on_save" : false,

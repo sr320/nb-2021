@@ -1,8 +1,0 @@
-"0","comb <- left_join(cdslist, uniprot, by = ""V1"") %>% "
-"0","  left_join(spur, by = ""V1"") %>%"
-"0","  left_join(spurn, by = ""V1"") %>%"
-"0","  left_join(dmel, by = ""V1"") %>%"
-"0","  left_join(celsym, by = c(""V1"" = ""V2"")) %>%"
-"0","  select(V1, V2.x, V11.x, V2.y, V11.y, V2.x.x, V3.x.x, V2.y.y, V3.y.y, V1.y, V3, V4) %>%"
-"0","  rename(cdsID = V1, uniprot = V2.x, u_ev = V11.x, spur = V2.y, s_ev = V11.y, spurN = V2.x.x, spurN_ev = V3.x.x, dmel = V2.y.y, dmel_ev = V3.y.y, cel_ID = V1.y, cel_ev = V3, cel_sym = V4)"
-"0","  "
