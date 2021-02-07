@@ -1,0 +1,29 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1612708513815.000,
+    "dirty" : false,
+    "encoding" : "",
+    "folds" : "",
+    "hash" : "0",
+    "id" : "42704EE7",
+    "lastKnownWriteTime" : 4294967302,
+    "last_content_update" : 1612708513815,
+    "path" : null,
+    "project_path" : null,
+    "properties" : {
+        "cacheKey" : "36EC631",
+        "caption" : "cdslist",
+        "contentUrl" : "grid_resource/gridviewer.html?env=&obj=cdslist&cache_key=36EC631",
+        "displayedObservations" : "46753",
+        "environment" : "",
+        "object" : "cdslist",
+        "preview" : "0",
+        "totalObservations" : "46753",
+        "variables" : "1"
+    },
+    "relative_order" : 4,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_dataframe"
+}

@@ -1,0 +1,29 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1612710681968.000,
+    "dirty" : false,
+    "encoding" : "",
+    "folds" : "",
+    "hash" : "0",
+    "id" : "B7977EE8",
+    "lastKnownWriteTime" : 3486402074319519750,
+    "last_content_update" : 1612710681968,
+    "path" : null,
+    "project_path" : null,
+    "properties" : {
+        "cacheKey" : "E4732411",
+        "caption" : "giles",
+        "contentUrl" : "grid_resource/gridviewer.html?env=&obj=giles&cache_key=E4732411",
+        "displayedObservations" : "46753",
+        "environment" : "",
+        "object" : "giles",
+        "preview" : "0",
+        "totalObservations" : "46753",
+        "variables" : "4"
+    },
+    "relative_order" : 11,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_dataframe"
+}

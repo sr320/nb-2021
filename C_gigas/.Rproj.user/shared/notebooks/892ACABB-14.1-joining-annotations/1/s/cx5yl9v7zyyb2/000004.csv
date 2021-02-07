@@ -1,0 +1,2 @@
+"0","uniprot <- read.csv(""../analyses/Cg-uniprot_blastx_02.tab"", header = FALSE, sep=""\t"") %>%"
+"0","  distinct(V1, .keep_all = TRUE)"
