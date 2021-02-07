@@ -9,3 +9,4 @@ O_lurida/data/Olurida_v081-bowtie-index.rev.8.sa
 *.bam
 .Rproj.user
 *.sam
+C_gigas/.Rproj.user/*

@@ -73,21 +73,13 @@ celsym <- read.csv("../analyses/Cg_Ce-genesym.tab", header = FALSE, sep="\t")
 JOIN
 
 ```{r}
-comb <- left_join(cdslist, uniprot, by = "V1") %>% 
-  left_join(spur, by = "V1") %>%
-  left_join(cel, by = "V1") %>%
-  left_join(dmel, by = "V1") %>%
-  select(V1, V2.x, V11.x, V2.y, V11.y, V2.x.x, V11.x.x, V2.y.y, V11.y.y) %>%
-  rename(cdsID = V1, uniprot = V2.x, u_ev = V11.x, spur = V2.y, s_ev = V11.y, cel = V2.x.x, cel_ev = V11.x.x, dmel = V2.y.y, dmel_ev = V11.y.y) %>%
-  left_join(giles, by = c("cdsID" = "ID"))
-```
-
-```{r}
-write_tsv(
-  comb,
-  "../analyses/Cg-annot-join.tab"
-)
-
+comb <- left_join(cdslist, uniprot, by = "V1") %>%
+left_join(spur, by = "V1") %>%
+left_join(spurn, by = "V1") %>%
+left_join(dmel, by = "V1") %>%
+left_join(celsym, by = c("V1" = "V2")) %>%
+select(V1, V2.x, V11.x, V2.y, V11.y, V2.x.x, V3.x.x, V2.y.y, V3.y.y, V1.y, V3, V4) %>%
+rename(cdsID = V1, uniprot = V2.x, u_ev = V11.x, spur = V2.y, s_ev = V11.y, spurN = V2.x.x, spurN_ev = V3.x.x, dmel = V2.y.y, dmel_ev = V3.y.y, cel_ID = V1.y, cel_ev = V3, cel_sym = V4)
 ```
 
 
@@ -102,7 +94,7 @@ giles <- read.csv("../data/bestblast_/bestblast.tab", header = TRUE, sep = "\t")
 
 
 ```{r}
-left_join(comb, giles, by = c("cdsID" = "ID"))
+comb-g <- left_join(comb, giles, by = c("cdsID" = "ID"))
 ```
 
 
@@ -112,6 +104,13 @@ loc <- read.csv("../data/bestblast_/LOC_seqID_key.tab", header = FALSE, sep = "\
 
 
 ```{r}
-loc_dt <- left_join(loc, comb, by = c("V1" = "cdsID"))
+loc_dt <- left_join(loc, comb-g, by = c("V1" = "cdsID"))
 ```
 
+```{r}
+write_tsv(
+  loc_dt,
+  "../analyses/Cg-annot-join-V1.1.tab"
+)
+
+```
