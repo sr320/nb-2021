@@ -83,7 +83,7 @@ rename(cdsID = V1, uniprot = V2.x, u_ev = V11.x, spur = V2.y, s_ev = V11.y, spur
 ```
 
 
-GOing back to Giles Blast
+# GOing back to Giles Blast
 
 ../data/bestblast_/bestblast.tab
 
@@ -111,6 +111,37 @@ loc_dt <- left_join(loc, comb_g, by = c("V1" = "cdsID"))
 write_tsv(
   loc_dt,
   "../analyses/Cg-annot-join-V1.1.tab"
+)
+
+```
+
+
+JOining Marker file
+
+
+```{r}
+top <- read.csv("../data/topmarker_bla_mitov7_top10perCluster.txt", header = TRUE, sep = "\t")
+```
+
+
+```{r}
+annot <- read.csv("../analyses/Cg-annot-join-V1.1.tab", header = TRUE, sep = "\t")
+```
+
+```{r}
+library(tidyverse)
+```
+
+
+```{r}
+top.annotv1.1 <- left_join(top, annot, by = c("gene_id" = "V2"))
+```
+
+
+```{r}
+write_tsv(
+  top.annotv1.1,
+  "../analyses/top.annotv1.1.tab"
 )
 
 ```
