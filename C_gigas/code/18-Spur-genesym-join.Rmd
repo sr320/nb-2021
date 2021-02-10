@@ -1,0 +1,37 @@
+---
+title: "18-Spur-genesym-join"
+output: html_document
+---
+
+
+
+```{r}
+library(tidyverse)
+```
+
+
+```{r}
+
+spur <- read.csv("../analyses/Cg-ProteinsSpur5.0_blastx.tab", header = FALSE, sep="\t") %>%
+  distinct(V1, .keep_all = TRUE) %>%
+  select(V1, V2, V11)
+```
+
+
+```{r}
+head(spur)
+```
+
+
+```{r}
+ncbiP <- read.csv("../data/NcbiProteinEchinobaseGene_Spur.txt", header = FALSE, sep="\t")
+
+head(ncbiP)
+```
+
+
+
+
+
+
+
