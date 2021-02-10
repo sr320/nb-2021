@@ -83,7 +83,7 @@ rename(cdsID = V1, uniprot = V2.x, u_ev = V11.x, spur = V2.y, s_ev = V11.y, spur
 ```
 
 
-# GOing back to Giles Blast
+GOing back to Giles Blast
 
 ../data/bestblast_/bestblast.tab
 
