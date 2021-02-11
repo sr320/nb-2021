@@ -28,8 +28,21 @@ ncbiP <- read.csv("../data/NcbiProteinEchinobaseGene_Spur.txt", header = FALSE, 
 
 head(ncbiP)
 ```
+```{r}
+library(fuzzyjoin)
+
+```
 
 
+
+```{r}
+betterspur <- spur %>% fuzzy_inner_join(ncbiP, by = "V2", match_fun = str_detect)
+
+```
+
+```{r}
+spur %>% stringdist_inner_join(ncbiP, by = "V2", max_dist = 2)
+```
 
 
 
