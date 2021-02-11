@@ -46,5 +46,11 @@ spur %>% stringdist_inner_join(ncbiP, by = "V2", max_dist = 2)
 
 
 
+```{r}
+write_tsv(
+  betterspur,
+  "../analyses/Spur-blastx-LOCsym.tab"
+)
 
+```
 
