@@ -23,7 +23,7 @@ cdslist <- read.csv("../analyses/GCF_000297895_cdslist.tab", header = FALSE)
 UNIPROT (but need to redo!!! - end premature)
  
 ```{r}
-uniprot <- read.csv("../analyses/Cg-uniprot_blastx_02.tab", header = FALSE, sep="\t") %>%
+suniprot <- read.csv("../analyses/Cg-uniprot_blastx_02.tab", header = FALSE, sep="\t") %>%
   distinct(V1, .keep_all = TRUE)
 ```
 
