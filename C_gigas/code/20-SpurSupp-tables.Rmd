@@ -1,0 +1,28 @@
+---
+title: "20-SpurSupp-tables"
+output: html_document
+---
+
+
+```{r}
+library(tidyverse)
+```
+
+```{r}
+S3 <- read.csv("../data/fwddev191528revisedsupplementaryfile/Table S3_ Morula_Cluster16.txt", header = TRUE, sep="\t") 
+```
+
+
+```{r}
+top1.2 <- read.csv("../analyses/top.annotv1.2.tab", header = TRUE, sep="\t")
+```
+
+
+
+
+
+
+```{r}
+left_join(S3, )
+```
+
