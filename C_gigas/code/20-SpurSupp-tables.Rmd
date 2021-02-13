@@ -150,3 +150,51 @@ write_tsv(
 
 ```
 
+
+S7_eg early gastrula
+
+
+```{r}
+S7eg <- read.csv("../data/fwddev191528revisedsupplementaryfile/Table S7_ Cluster 20 Markers_early_gastrula.txt", header = TRUE, sep="\t") 
+```
+
+
+
+```{r}
+S7eg_top1.2 <- left_join(S7eg, top1.2, by = c("Row.names" ="sp_sym"))
+```
+
+
+```{r}
+write_tsv(
+  S7eg_top1.2,
+  "../analyses/S7eg_top1.2.tsv"
+)
+
+```
+
+
+
+
+S7_lg late gastrula
+
+
+```{r}
+S7lg <- read.csv("../data/fwddev191528revisedsupplementaryfile/Table S7_ Cluster 20 Markers_Late_gastrula.txt", header = TRUE, sep="\t") 
+```
+
+
+
+```{r}
+S7lg_top1.2 <- left_join(S7lg, top1.2, by = c("Row.names" ="sp_sym"))
+```
+
+
+```{r}
+write_tsv(
+  S7lg_top1.2,
+  "../analyses/S7lg_top1.2.tsv"
+)
+
+```
+
