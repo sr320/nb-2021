@@ -23,6 +23,130 @@ top1.2 <- read.csv("../analyses/top.annotv1.2.tab", header = TRUE, sep="\t")
 
 
 ```{r}
-left_join(S3, )
+S3_top1.2 <-left_join(S3, top1.2, by = c("Row.names" ="sp_sym"))
+```
+
+
+```{r}
+write_tsv(
+  S3_top1.2,
+  "../analyses/S3_top1.2.tsv"
+)
+
+```
+
+
+S4
+
+```{r}
+S4 <- read.csv("../data/fwddev191528revisedsupplementaryfile/Table S4_ Morula_Cluster20.txt", header = TRUE, sep="\t") 
+```
+
+
+
+```{r}
+S4_top1.2 <-left_join(S4, top1.2, by = c("Row.names" ="sp_sym"))
+```
+
+
+```{r}
+write_tsv(
+  S4_top1.2,
+  "../analyses/S4_top1.2.tsv"
+)
+
+```
+
+
+S7_morula
+
+
+```{r}
+S7mor <- read.csv("../data/fwddev191528revisedsupplementaryfile/Table S7_ Cluster 20 Markers_morula.txt", header = TRUE, sep="\t") 
+```
+
+
+
+```{r}
+S7mor_top1.2 <- left_join(S7mor, top1.2, by = c("Row.names" ="sp_sym"))
+```
+
+
+```{r}
+write_tsv(
+  S7mor_top1.2,
+  "../analyses/S7mor_top1.2.tsv"
+)
+
+```
+
+
+S7_eb early blastula
+
+
+```{r}
+S7eb <- read.csv("../data/fwddev191528revisedsupplementaryfile/Table S7_ Cluster 20 Markers_early_blastula.txt", header = TRUE, sep="\t") 
+```
+
+
+
+```{r}
+S7eb_top1.2 <- left_join(S7eb, top1.2, by = c("Row.names" ="sp_sym"))
+```
+
+
+```{r}
+write_tsv(
+  S7eb_top1.2,
+  "../analyses/S7eb_top1.2.tsv"
+)
+
+```
+
+
+S7_hb  hatched blastula
+
+
+```{r}
+S7hb <- read.csv("../data/fwddev191528revisedsupplementaryfile/Table S7_ Cluster 20 Markers_hatched_blastula.txt", header = TRUE, sep="\t") 
+```
+
+
+
+```{r}
+S7hb_top1.2 <- left_join(S7hb, top1.2, by = c("Row.names" ="sp_sym"))
+```
+
+
+```{r}
+write_tsv(
+  S7hb_top1.2,
+  "../analyses/S7hb_top1.2.tsv"
+)
+
+```
+
+
+
+S7_mb mesenchyme blastula
+
+
+```{r}
+S7mb <- read.csv("../data/fwddev191528revisedsupplementaryfile/Table S7_ Cluster 20 Markers_mesenchyme_blastula.txt", header = TRUE, sep="\t") 
+```
+
+
+
+```{r}
+S7mb_top1.2 <- left_join(S7mb, top1.2, by = c("Row.names" ="sp_sym"))
+```
+
+
+```{r}
+write_tsv(
+  S7mb_top1.2,
+  "../analyses/S7mb_top1.2.tsv"
+)
+
 ```
 
