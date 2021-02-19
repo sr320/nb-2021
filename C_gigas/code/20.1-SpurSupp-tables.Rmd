@@ -4,6 +4,8 @@ output: html_document
 ---
 
 
+running wiht annotation v1.3
+
 ```{r}
 library(tidyverse)
 ```
@@ -14,7 +16,7 @@ S3 <- read.csv("../data/fwddev191528revisedsupplementaryfile/Table S3_ Morula_Cl
 
 
 ```{r}
-top1.2 <- read.csv("../analyses/top.annotv1.2.tab", header = TRUE, sep="\t")
+top1.3 <- read.csv("../analyses/top.annotv1.3.tab", header = TRUE, sep="\t")
 ```
 
 
@@ -23,14 +25,14 @@ top1.2 <- read.csv("../analyses/top.annotv1.2.tab", header = TRUE, sep="\t")
 
 
 ```{r}
-S3_top1.2 <-left_join(S3, top1.2, by = c("Row.names" ="sp_sym"))
+S3_top1.3 <-left_join(S3, top1.3, by = c("Row.names" ="sp_sym"))
 ```
 
 
 ```{r}
 write_tsv(
-  S3_top1.2,
-  "../analyses/S3_top1.2.tsv"
+  S3_top1.3,
+  "../analyses/S3_top1.3.tsv"
 )
 
 ```
@@ -45,14 +47,14 @@ S4 <- read.csv("../data/fwddev191528revisedsupplementaryfile/Table S4_ Morula_Cl
 
 
 ```{r}
-S4_top1.2 <-left_join(S4, top1.2, by = c("Row.names" ="sp_sym"))
+S4_top1.3 <-left_join(S4, top1.3, by = c("Row.names" ="sp_sym"))
 ```
 
 
 ```{r}
 write_tsv(
-  S4_top1.2,
-  "../analyses/S4_top1.2.tsv"
+  S4_top1.3,
+  "../analyses/S4_top1.3.tsv"
 )
 
 ```
@@ -68,14 +70,14 @@ S7mor <- read.csv("../data/fwddev191528revisedsupplementaryfile/Table S7_ Cluste
 
 
 ```{r}
-S7mor_top1.2 <- left_join(S7mor, top1.2, by = c("Row.names" ="sp_sym"))
+S7mor_top1.3 <- left_join(S7mor, top1.3, by = c("Row.names" ="sp_sym"))
 ```
 
 
 ```{r}
 write_tsv(
-  S7mor_top1.2,
-  "../analyses/S7mor_top1.2.tsv"
+  S7mor_top1.3,
+  "../analyses/S7mor_top1.3.tsv"
 )
 
 ```
@@ -91,14 +93,14 @@ S7eb <- read.csv("../data/fwddev191528revisedsupplementaryfile/Table S7_ Cluster
 
 
 ```{r}
-S7eb_top1.2 <- left_join(S7eb, top1.2, by = c("Row.names" ="sp_sym"))
+S7eb_top1.3 <- left_join(S7eb, top1.3, by = c("Row.names" ="sp_sym"))
 ```
 
 
 ```{r}
 write_tsv(
-  S7eb_top1.2,
-  "../analyses/S7eb_top1.2.tsv"
+  S7eb_top1.3,
+  "../analyses/S7eb_top1.3.tsv"
 )
 
 ```
@@ -114,14 +116,14 @@ S7hb <- read.csv("../data/fwddev191528revisedsupplementaryfile/Table S7_ Cluster
 
 
 ```{r}
-S7hb_top1.2 <- left_join(S7hb, top1.2, by = c("Row.names" ="sp_sym"))
+S7hb_top1.3 <- left_join(S7hb, top1.3, by = c("Row.names" ="sp_sym"))
 ```
 
 
 ```{r}
 write_tsv(
-  S7hb_top1.2,
-  "../analyses/S7hb_top1.2.tsv"
+  S7hb_top1.3,
+  "../analyses/S7hb_top1.3.tsv"
 )
 
 ```
@@ -138,14 +140,14 @@ S7mb <- read.csv("../data/fwddev191528revisedsupplementaryfile/Table S7_ Cluster
 
 
 ```{r}
-S7mb_top1.2 <- left_join(S7mb, top1.2, by = c("Row.names" ="sp_sym"))
+S7mb_top1.3 <- left_join(S7mb, top1.3, by = c("Row.names" ="sp_sym"))
 ```
 
 
 ```{r}
 write_tsv(
-  S7mb_top1.2,
-  "../analyses/S7mb_top1.2.tsv"
+  S7mb_top1.3,
+  "../analyses/S7mb_top1.3.tsv"
 )
 
 ```
@@ -161,14 +163,14 @@ S7eg <- read.csv("../data/fwddev191528revisedsupplementaryfile/Table S7_ Cluster
 
 
 ```{r}
-S7eg_top1.2 <- left_join(S7eg, top1.2, by = c("Row.names" ="sp_sym"))
+S7eg_top1.3 <- left_join(S7eg, top1.3, by = c("Row.names" ="sp_sym"))
 ```
 
 
 ```{r}
 write_tsv(
-  S7eg_top1.2,
-  "../analyses/S7eg_top1.2.tsv"
+  S7eg_top1.3,
+  "../analyses/S7eg_top1.3.tsv"
 )
 
 ```
@@ -186,14 +188,14 @@ S7lg <- read.csv("../data/fwddev191528revisedsupplementaryfile/Table S7_ Cluster
 
 
 ```{r}
-S7lg_top1.2 <- left_join(S7lg, top1.2, by = c("Row.names" ="sp_sym"))
+S7lg_top1.3 <- left_join(S7lg, top1.3, by = c("Row.names" ="sp_sym"))
 ```
 
 
 ```{r}
 write_tsv(
-  S7lg_top1.2,
-  "../analyses/S7lg_top1.2.tsv"
+  S7lg_top1.3,
+  "../analyses/S7lg_top1.3.tsv"
 )
 
 ```
