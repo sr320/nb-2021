@@ -3,6 +3,9 @@ title: "14.1-joining-annotations"
 output: html_document
 ---
 
+Redoing with SPur blastx removing evalue. --- will need t join with tables later..
+
+
 ```{r}
 library(tidyverse)
 ```
@@ -64,10 +67,10 @@ comb <- left_join(cdslist, uniprot, by = "V1")  %>%
 left_join(spurLOC, by = c("V1" ="V1.x")) %>%
 left_join(dmel, by = "V1") %>%
 left_join(celsym, by = c("V1" = "V2")) %>%
-select(V1, V2.x, V3.x, V2.x.x, V11, V1.y, V3.y, V4.x, V2.y.y, V3.x.x,
-V1.y.y, V3.y.y, V4.y) %>% 
+select(V1, V2.x, V3.x, V2.x.x, V3.x.x, V1.y, V3.y, V4.x, V2.y.y, V3.y.y,
+V1.y.y, V3, V4.y) %>% 
 rename(cdsID = V1, uniprot = V2.x, u_ev = V3.x, spurAcc
-= V2.x.x, s_ev = V11, spID02 = V1.y, sp_ecb = V3.y, sp_sym = V4.x, dmel = V2.y.y, dmel_ev = V3.x.x, cel_ID = V1.y.y, cel_ev = V3.y.y, cel_sym = V4.y)
+= V2.x.x, s_ev = V3.x.x, spID02 = V1.y, sp_ecb = V3.y, sp_sym = V4.x, dmel = V2.y.y, dmel_ev = V3.y.y, cel_ID = V1.y.y, cel_ev = V3, cel_sym = V4.y)
 ```
 
 
@@ -98,7 +101,7 @@ loc_dt <- left_join(loc, comb_g, by = c("V1" = "cdsID"))
 ```{r}
 write_tsv(
   loc_dt,
-  "../analyses/Cg-annot-join-V1.2.tab"
+  "../analyses/Cg-annot-join-V1.3.tab"
 )
 
 ```
@@ -113,7 +116,7 @@ top <- read.csv("../data/topmarker_bla_mitov7_top10perCluster.txt", header = TRU
 
 
 ```{r}
-annot <- read.csv("../analyses/Cg-annot-join-V1.2.tab", header = TRUE, sep = "\t")
+annot <- read.csv("../analyses/Cg-annot-join-V1.3.tab", header = TRUE, sep = "\t")
 ```
 
 ```{r}
@@ -122,14 +125,14 @@ library(tidyverse)
 
 
 ```{r}
-top.annotv1.2 <- left_join(top, annot, by = c("gene_id" = "V2"))
+top.annotv1.3 <- left_join(top, annot, by = c("gene_id" = "V2"))
 ```
 
 
 ```{r}
 write_tsv(
-  top.annotv1.2,
-  "../analyses/top.annotv1.2.tab"
+  top.annotv1.3,
+  "../analyses/top.annotv1.3.tab"
 )
 
 ```
