@@ -13,9 +13,8 @@ library(tidyverse)
 
 ```{r}
 
-spur <- read.csv("../analyses/Cg-ProteinsSpur5.0_blastx.tab", header = FALSE, sep="\t") %>%
-  distinct(V1, .keep_all = TRUE) %>%
-  select(V1, V2, V11)
+spur <- read.csv("../analyses/Cg-blastx-spur-nev.tab", header = FALSE, sep="\t") %>%
+  distinct(V1, .keep_all = TRUE)
 ```
 
 
@@ -42,7 +41,7 @@ betterspur <- spur %>% fuzzy_inner_join(ncbiP, by = "V2", match_fun = str_detect
 ```
 
 ```{r}
-spur %>% stringdist_inner_join(ncbiP, by = "V2", max_dist = 2)
+#spur %>% stringdist_inner_join(ncbiP, by = "V2", max_dist = 2)
 ```
 
 
