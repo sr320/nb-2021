@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Session genome="/Users/sr320/Documents/GitHub/nb-2021/C_gigas/data/cgigas_uk_roslin_v1_genomic-mito.fa" hasGeneTrack="false" hasSequenceTrack="true" locus="NC_047563.1:36010875-37165846" version="8">
+    <Resources>
+        <Resource name="zr3534_2_R1.fastp-trim.20201202_10x.bedgraph" path="https://gannet.fish.washington.edu/seashell/bu-mox/scrubbed/030521-ronrosM/zr3534_2_R1.fastp-trim.20201202_10x.bedgraph"/>
+        <Resource name="zr3534_9_R1.fastp-trim.20201202_10x.bedgraph" path="https://gannet.fish.washington.edu/seashell/bu-mox/scrubbed/030521-ronrosM/zr3534_9_R1.fastp-trim.20201202_10x.bedgraph"/>
+        <Resource index="https://gannet.fish.washington.edu/seashell/bu-mox/scrubbed/030521-ronrosM/zr3534_1_R1.fastp-trim.20201202_bismark_bt2_pe.deduplicated.sorted.bam.bai" name="zr3534_1_R1.fastp-trim.20201202_bismark_bt2_pe.deduplicated.sorted.bam" path="https://gannet.fish.washington.edu/seashell/bu-mox/scrubbed/030521-ronrosM/zr3534_1_R1.fastp-trim.20201202_bismark_bt2_pe.deduplicated.sorted.bam"/>
+        <Resource index="https://gannet.fish.washington.edu/seashell/bu-mox/scrubbed/030521-ronrosM/zr3534_2_R1.fastp-trim.20201202_bismark_bt2_pe.deduplicated.sorted.bam.bai" name="zr3534_2_R1.fastp-trim.20201202_bismark_bt2_pe.deduplicated.sorted.bam" path="https://gannet.fish.washington.edu/seashell/bu-mox/scrubbed/030521-ronrosM/zr3534_2_R1.fastp-trim.20201202_bismark_bt2_pe.deduplicated.sorted.bam"/>
+        <Resource index="https://gannet.fish.washington.edu/seashell/bu-mox/scrubbed/030521-ronrosM/zr3534_9_R1.fastp-trim.20201202_bismark_bt2_pe.deduplicated.sorted.bam.bai" name="zr3534_9_R1.fastp-trim.20201202_bismark_bt2_pe.deduplicated.sorted.bam" path="https://gannet.fish.washington.edu/seashell/bu-mox/scrubbed/030521-ronrosM/zr3534_9_R1.fastp-trim.20201202_bismark_bt2_pe.deduplicated.sorted.bam"/>
+        <Resource index="https://gannet.fish.washington.edu/seashell/bu-mox/scrubbed/030521-ronrosM/zr3534_10_R1.fastp-trim.20201202_bismark_bt2_pe.deduplicated.sorted.bam.bai" name="zr3534_10_R1.fastp-trim.20201202_bismark_bt2_pe.deduplicated.sorted.bam" path="https://gannet.fish.washington.edu/seashell/bu-mox/scrubbed/030521-ronrosM/zr3534_10_R1.fastp-trim.20201202_bismark_bt2_pe.deduplicated.sorted.bam"/>
+        <Resource name="cgigas_uk_roslin_v1_CDS.gff" path="http://owl.fish.washington.edu/halfshell/genomic-databank/cgigas_uk_roslin_v1_CDS.gff"/>
+        <Resource name="cgigas_uk_roslin_v1_gene.gff" path="http://owl.fish.washington.edu/halfshell/genomic-databank/cgigas_uk_roslin_v1_gene.gff"/>
+    </Resources>
+    <Panel height="146" name="DataPanel" width="1580">
+        <Track attributeKey="zr3534_2_R1.fastp-trim.20201202_10x.bedgraph" autoScale="false" clazz="org.broad.igv.track.DataSourceTrack" colorScale="ContinuousColorScale;0.0;100.0;255,255,255;0,0,178" fontSize="10" id="https://gannet.fish.washington.edu/seashell/bu-mox/scrubbed/030521-ronrosM/zr3534_2_R1.fastp-trim.20201202_10x.bedgraph" name="zr3534_2_R1.fastp-trim.20201202_10x.bedgraph" renderer="BAR_CHART" visible="true" windowFunction="mean">
+            <DataRange baseline="0.0" drawBaseline="true" flipAxis="false" maximum="100.0" minimum="0.0" type="LINEAR"/>
+        </Track>
+        <Track attributeKey="zr3534_9_R1.fastp-trim.20201202_10x.bedgraph" autoScale="false" clazz="org.broad.igv.track.DataSourceTrack" colorScale="ContinuousColorScale;0.0;100.0;255,255,255;0,0,178" fontSize="10" id="https://gannet.fish.washington.edu/seashell/bu-mox/scrubbed/030521-ronrosM/zr3534_9_R1.fastp-trim.20201202_10x.bedgraph" name="zr3534_9_R1.fastp-trim.20201202_10x.bedgraph" renderer="BAR_CHART" visible="true" windowFunction="mean">
+            <DataRange baseline="0.0" drawBaseline="true" flipAxis="false" maximum="100.0" minimum="0.0" type="LINEAR"/>
+        </Track>
+    </Panel>
+    <Panel height="333" name="Panel1622819743709" width="1580">
+        <Track attributeKey="zr3534_1_R1.fastp-trim.20201202_bismark_bt2_pe.deduplicated.sorted.bam Coverage" autoScale="false" clazz="org.broad.igv.sam.CoverageTrack" color="175,175,175" colorScale="ContinuousColorScale;0.0;19.0;255,255,255;175,175,175" fontSize="10" id="https://gannet.fish.washington.edu/seashell/bu-mox/scrubbed/030521-ronrosM/zr3534_1_R1.fastp-trim.20201202_bismark_bt2_pe.deduplicated.sorted.bam_coverage" name="zr3534_1_R1.fastp-trim.20201202_bismark_bt2_pe.deduplicated.sorted.bam Coverage" snpThreshold="0.2" visible="true">
+            <DataRange baseline="0.0" drawBaseline="true" flipAxis="false" maximum="100.0" minimum="0.0" type="LINEAR"/>
+        </Track>
+        <Track attributeKey="zr3534_2_R1.fastp-trim.20201202_bismark_bt2_pe.deduplicated.sorted.bam Coverage" autoScale="false" clazz="org.broad.igv.sam.CoverageTrack" color="175,175,175" colorScale="ContinuousColorScale;0.0;74.0;255,255,255;175,175,175" fontSize="10" id="https://gannet.fish.washington.edu/seashell/bu-mox/scrubbed/030521-ronrosM/zr3534_2_R1.fastp-trim.20201202_bismark_bt2_pe.deduplicated.sorted.bam_coverage" name="zr3534_2_R1.fastp-trim.20201202_bismark_bt2_pe.deduplicated.sorted.bam Coverage" snpThreshold="0.2" visible="true">
+            <DataRange baseline="0.0" drawBaseline="true" flipAxis="false" maximum="100.0" minimum="0.0" type="LINEAR"/>
+        </Track>
+        <Track attributeKey="zr3534_9_R1.fastp-trim.20201202_bismark_bt2_pe.deduplicated.sorted.bam Coverage" autoScale="false" clazz="org.broad.igv.sam.CoverageTrack" color="175,175,175" colorScale="ContinuousColorScale;0.0;10.0;255,255,255;175,175,175" fontSize="10" id="https://gannet.fish.washington.edu/seashell/bu-mox/scrubbed/030521-ronrosM/zr3534_9_R1.fastp-trim.20201202_bismark_bt2_pe.deduplicated.sorted.bam_coverage" name="zr3534_9_R1.fastp-trim.20201202_bismark_bt2_pe.deduplicated.sorted.bam Coverage" snpThreshold="0.2" visible="true">
+            <DataRange baseline="0.0" drawBaseline="true" flipAxis="false" maximum="100.0" minimum="0.0" type="LINEAR"/>
+        </Track>
+        <Track attributeKey="zr3534_9_R1.fastp-trim.20201202_bismark_bt2_pe.deduplicated.sorted.bam Junctions" clazz="org.broad.igv.sam.SpliceJunctionTrack" fontSize="10" height="60" id="https://gannet.fish.washington.edu/seashell/bu-mox/scrubbed/030521-ronrosM/zr3534_9_R1.fastp-trim.20201202_bismark_bt2_pe.deduplicated.sorted.bam_junctions" name="zr3534_9_R1.fastp-trim.20201202_bismark_bt2_pe.deduplicated.sorted.bam Junctions" visible="false"/>
+        <Track attributeKey="zr3534_10_R1.fastp-trim.20201202_bismark_bt2_pe.deduplicated.sorted.bam Coverage" autoScale="false" clazz="org.broad.igv.sam.CoverageTrack" color="175,175,175" colorScale="ContinuousColorScale;0.0;10.0;255,255,255;175,175,175" fontSize="10" id="https://gannet.fish.washington.edu/seashell/bu-mox/scrubbed/030521-ronrosM/zr3534_10_R1.fastp-trim.20201202_bismark_bt2_pe.deduplicated.sorted.bam_coverage" name="zr3534_10_R1.fastp-trim.20201202_bismark_bt2_pe.deduplicated.sorted.bam Coverage" snpThreshold="0.2" visible="true">
+            <DataRange baseline="0.0" drawBaseline="true" flipAxis="false" maximum="100.0" minimum="0.0" type="LINEAR"/>
+        </Track>
+    </Panel>
+    <Panel height="20" name="Panel1622819950885" width="1580">
+        <Track attributeKey="zr3534_1_R1.fastp-trim.20201202_bismark_bt2_pe.deduplicated.sorted.bam Junctions" clazz="org.broad.igv.sam.SpliceJunctionTrack" fontSize="10" height="60" id="https://gannet.fish.washington.edu/seashell/bu-mox/scrubbed/030521-ronrosM/zr3534_1_R1.fastp-trim.20201202_bismark_bt2_pe.deduplicated.sorted.bam_junctions" name="zr3534_1_R1.fastp-trim.20201202_bismark_bt2_pe.deduplicated.sorted.bam Junctions" visible="false"/>
+    </Panel>
+    <Panel height="56" name="Panel1622819989900" width="1580">
+        <Track attributeKey="zr3534_10_R1.fastp-trim.20201202_bismark_bt2_pe.deduplicated.sorted.bam Junctions" clazz="org.broad.igv.sam.SpliceJunctionTrack" fontSize="10" height="60" id="https://gannet.fish.washington.edu/seashell/bu-mox/scrubbed/030521-ronrosM/zr3534_10_R1.fastp-trim.20201202_bismark_bt2_pe.deduplicated.sorted.bam_junctions" name="zr3534_10_R1.fastp-trim.20201202_bismark_bt2_pe.deduplicated.sorted.bam Junctions" visible="false"/>
+    </Panel>
+    <Panel height="170" name="FeaturePanel" width="1580">
+        <Track attributeKey="Reference sequence" clazz="org.broad.igv.track.SequenceTrack" fontSize="10" id="Reference sequence" name="Reference sequence" sequenceTranslationStrandValue="POSITIVE" shouldShowTranslation="false" visible="true"/>
+        <Track attributeKey="cgigas_uk_roslin_v1_gene.gff" clazz="org.broad.igv.track.FeatureTrack" color="0,0,178" colorScale="ContinuousColorScale;0.0;69.0;255,255,255;0,0,178" fontSize="10" id="http://owl.fish.washington.edu/halfshell/genomic-databank/cgigas_uk_roslin_v1_gene.gff" name="cgigas_uk_roslin_v1_gene.gff" visible="true"/>
+        <Track attributeKey="cgigas_uk_roslin_v1_CDS.gff" clazz="org.broad.igv.track.FeatureTrack" color="0,0,178" colorScale="ContinuousColorScale;0.0;5782.0;255,255,255;0,0,178" fontSize="10" id="http://owl.fish.washington.edu/halfshell/genomic-databank/cgigas_uk_roslin_v1_CDS.gff" name="cgigas_uk_roslin_v1_CDS.gff" visible="true"/>
+    </Panel>
+    <PanelLayout dividerFractions="0.2024623803009576,0.66484268125855,0.6771545827633378,0.7606019151846786"/>
+    <HiddenAttributes>
+        <Attribute name="DATA FILE"/>
+        <Attribute name="DATA TYPE"/>
+        <Attribute name="NAME"/>
+    </HiddenAttributes>
+</Session>
