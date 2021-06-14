@@ -52,4 +52,6 @@ library(methylKit)
 myobj_11 = processBismarkAln(location = sb.list, sample.id = list("1","2","3","4","5","6","7","8"), assembly = "v081", read.context="CpG", mincov=2, treatment = c(0,0,0,0,1,1,1,1))
 ```
 
-
+```{r, eval = FALSE}
+save(myobj_11, file = "../analyses/myobj_01")
+```
