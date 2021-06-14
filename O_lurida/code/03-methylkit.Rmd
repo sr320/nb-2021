@@ -1,0 +1,55 @@
+---
+title: "03-methylkit"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+
+# setting up a notbook to run methylkit
+
+
+https://gannet.fish.washington.edu/seashell/bu-mox/scrubbed/060321-oly/1_ATCACG_L001_R1_001_trimmed_bismark_bt2.deduplicated.sorted.bam
+
+/Volumes/block/wd/061421
+
+```{bash}
+pwd
+```
+
+
+```{bash}
+wget -r \
+--no-directories --no-parent \
+-P /Volumes/block/wd/061421/ \
+--quiet \
+-A *deduplicated.sorted.bam \ https://gannet.fish.washington.edu/seashell/bu-mox/scrubbed/060321-oly/
+```
+/Volumes/block/wd/061421/1_ATCACG_L001_R1_001_trimmed_bismark_bt2.deduplicated.sorted.bam
+
+```{r}
+sb.list=list('/Volumes/block/wd/061421/1_ATCACG_L001_R1_001_trimmed_bismark_bt2.deduplicated.sorted.bam',
+                 '/Volumes/block/wd/061421/2_CGATGT_L001_R1_001_trimmed_bismark_bt2.deduplicated.sorted.bam',
+                 '/Volumes/block/wd/061421/3_TTAGGC_L001_R1_001_trimmed_bismark_bt2.deduplicated.sorted.bam',
+                 '/Volumes/block/wd/061421/4_TGACCA_L001_R1_001_trimmed_bismark_bt2.deduplicated.sorted.bam',
+                 '/Volumes/block/wd/061421/5_ACAGTG_L001_R1_001_trimmed_bismark_bt2.deduplicated.sorted.bam',
+                 '/Volumes/block/wd/061421/6_GCCAAT_L001_R1_001_trimmed_bismark_bt2.deduplicated.sorted.bam',
+                 '/Volumes/block/wd/061421/7_CAGATC_L001_R1_001_trimmed_bismark_bt2.deduplicated.sorted.bam',
+                 '/Volumes/block/wd/061421/data/8_ACTTGA_L001_R1_001_trimmed_bismark_bt2.deduplicated.sorted.bam'
+)
+```
+
+
+
+```{r}
+library(methylKit)
+```
+
+
+```{r, eval = FALSE}
+myobj_11 = processBismarkAln(location = sb.list, sample.id = list("1","2","3","4","5","6","7","8"), assembly = "v081", read.context="CpG", mincov=2, treatment = c(0,0,0,0,1,1,1,1))
+```
+
+
