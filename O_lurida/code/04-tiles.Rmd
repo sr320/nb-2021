@@ -34,14 +34,14 @@ myobj_lowCov = methRead(cov.list,
 
 
 
-```{r}
+```{r, eval=FALSE}
 tiles = tileMethylCounts(myobj_lowCov,win.size=1000,step.size=1000,cov.bases = 10)
 head(tiles[[1]],3)
 ```
 
 
 ```{r}
-save(tiles, file = "../analyses/tiles_01")
+#save(tiles, file = "../analyses/tiles_01")
 ```
 
 

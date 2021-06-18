@@ -19,7 +19,7 @@ pwd
 ```
 
 
-```{bash}
+```{bash, eval=FALSE}
 wget -r \
 --no-directories --no-parent \
 -P /Volumes/block/wd/061421/ \

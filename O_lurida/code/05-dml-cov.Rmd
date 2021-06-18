@@ -14,7 +14,7 @@ pwd
 ```
 
 
-```{bash}
+```{bash, eval=FALSE}
 wget -r \
 --no-directories --no-parent \
 --no-check-certificate \
