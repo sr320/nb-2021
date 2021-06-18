@@ -1,0 +1,4 @@
+pwd
+setwd(/Users/sr320/Documents/GitHub/nb-2021/O_lurida/code)
+setwd("/Users/sr320/Documents/GitHub/nb-2021/O_lurida/code")
+library(methyKit)

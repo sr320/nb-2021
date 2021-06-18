@@ -1,0 +1,55 @@
+---
+title: "03-methylkit"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+
+# Trying Yaamini's code, using evidence.cov
+
+
+https://gannet.fish.washington.edu/seashell/bu-mox/scrubbed/060321-oly/8_ACTTGA.CpG_report.merged_CpG_evidence.cov
+
+
+```{bash}
+pwd
+```
+
+
+```{bash}
+wget -r \
+--no-directories --no-parent \
+--no-check-certificate \
+-P ../data/ \
+-A *CpG_evidence.cov https://gannet.fish.washington.edu/seashell/bu-mox/scrubbed/060321-oly/
+```
+/Users/sr320/Documents/GitHub/nb-2021/O_lurida/data/1_ATCACG.CpG_report.merged_CpG_evidence.cov
+```{r}
+cov.list=list('../data/1_ATCACG.CpG_report.merged_CpG_evidence.cov',
+                 '../data/2_CGATGT.CpG_report.merged_CpG_evidence.cov',
+                 '../data/3_TTAGGC.CpG_report.merged_CpG_evidence.cov',
+                 '../data/4_TGACCA.CpG_report.merged_CpG_evidence.cov',
+                 '../data/5_ACAGTG.CpG_report.merged_CpG_evidence.cov',
+                 '../data/6_GCCAAT.CpG_report.merged_CpG_evidence.cov',
+                 '../data/7_CAGATC.CpG_report.merged_CpG_evidence.cov',
+                 '../data/8_ACTTGA.CpG_report.merged_CpG_evidence.cov'
+)
+```
+
+
+
+```{r}
+library(methylKit)
+```
+
+
+```{r, eval = FALSE}
+myobj_11 = processBismarkAln(location = sb.list, sample.id = list("1","2","3","4","5","6","7","8"), assembly = "v081", read.context="CpG", mincov=2, treatment = c(0,0,0,0,1,1,1,1))
+```
+
+```{r, eval = FALSE}
+save(myobj_11, file = "../analyses/myobj_01")
+```
