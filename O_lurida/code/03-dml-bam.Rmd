@@ -1,14 +1,13 @@
 ---
 title: "03-methylkit"
-output: html_document
+output: github_document
 ---
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-
-# setting up a notbook to run methylkit
+# Running DML with BAMs
 
 
 https://gannet.fish.washington.edu/seashell/bu-mox/scrubbed/060321-oly/1_ATCACG_L001_R1_001_trimmed_bismark_bt2.deduplicated.sorted.bam
@@ -30,7 +29,7 @@ wget -r \
 /Volumes/block/wd/061421/1_ATCACG_L001_R1_001_trimmed_bismark_bt2.deduplicated.sorted.bam
 
 ```{r}
-sb.list=list('/Volumes/block/wd/061421/1_ATCACG_L001_R1_001_trimmed_bismark_bt2.deduplicated.sorted.bam',
+bam.list=list('/Volumes/block/wd/061421/1_ATCACG_L001_R1_001_trimmed_bismark_bt2.deduplicated.sorted.bam',
                  '/Volumes/block/wd/061421/2_CGATGT_L001_R1_001_trimmed_bismark_bt2.deduplicated.sorted.bam',
                  '/Volumes/block/wd/061421/3_TTAGGC_L001_R1_001_trimmed_bismark_bt2.deduplicated.sorted.bam',
                  '/Volumes/block/wd/061421/4_TGACCA_L001_R1_001_trimmed_bismark_bt2.deduplicated.sorted.bam',
@@ -40,6 +39,12 @@ sb.list=list('/Volumes/block/wd/061421/1_ATCACG_L001_R1_001_trimmed_bismark_bt2.
                  '/Volumes/block/wd/061421/8_ACTTGA_L001_R1_001_trimmed_bismark_bt2.deduplicated.sorted.bam'
 )
 ```
+
+
+```{bash}
+ls -lh /Volumes/block/wd/061421/*.sorted.bam
+```
+
 
 
 
@@ -57,25 +62,12 @@ save(myobj_01, file = "../analyses/myobj_01")
 ```
 
 
-```{r}
-getMethylationStats(myobj_01[[3]],plot=TRUE,both.strands=FALSE)
-
-```
-filtered.myobj
 
 ```{r}
-getMethylationStats(filtered.myobj[[3]],plot=TRUE,both.strands=FALSE)
-
-```
-```{r}
-getCoverageStats(filtered.myobj[[2]],plot=TRUE,both.strands=FALSE)
-
+load("../analyses/myobj_01")
 ```
 
 
-```{r}
-#load("../analyses/myobj_11")
-```
 
 ```{r}
 filtered.myobj=filterByCoverage(myobj_01,lo.count=10,lo.perc=NULL,
@@ -124,24 +116,6 @@ myDiff25p=getMethylDiff(myDiff,difference=10,qvalue=.01)
 head(filtered.myobj)
 ```
 
-```{r}
-getCorrelation(filtered.myobj,plot=TRUE)
-```
-
-
-```{r}
-myobj_lowCov = processBismarkAln(sb.list,
-           sample.id = list("1","2","3","4","5","6","7","8"),
-           assembly="v081",
-           treatment = c(0,0,0,0,1,1,1,1),
-           context="CpG",
-           mincov = 3
-           )
-
-```
-
-
-ocation = sb.list, sample.id = list("1","2","3","4","5","6","7","8"), assembly = "v081", read.context="CpG", mincov=2, treatment = c(0,0,0,0,1,1,1,1))
 
 
 
@@ -155,47 +129,6 @@ ocation = sb.list, sample.id = list("1","2","3","4","5","6","7","8"), assembly =
 
 
 
-
-
-
-
-```{r}
-# Function
-tileit <- function(object, win.size=100, step.size=100, cov.bases=5) {
-  g.meth <- as(object,"GRanges")
-  chrs <- as.character(unique(seqnames(g.meth)))
-  grl <- split(g.meth, seqnames(g.meth))
-  max.length <- max(end(grl))
-  numTiles <- floor((max.length - (win.size - step.size))/step.size) + 1
-  starts <- unlist(sapply(numTiles,function(x) 1+0:(x-1)*step.size))
-  ranges <- IRanges(start=starts, width=rep(win.size,length(starts)))
-  all.wins <- GRanges(seqnames=Rle(chrs, numTiles), ranges=ranges)
-  rcounts <- regionCounts(object, all.wins, 0, strand.aware=FALSE)
-  rcounts.filtered <- rcounts[rcounts$coverage >= cov.bases, ]
-  return(rcounts.filtered)
-}
-
-# Code to run function on methylKitList
-new.list <- lapply(myobj_01, tileit)
-myobj.tiled <- new("methylRawList", new.list, treatment=myobj_01@treatment)
-```
-
-
-```{r}
-filtered.myobj_tile=filterByCoverage(myobj.tiled,lo.count=5,lo.perc=NULL,
-                                      hi.count=100,hi.perc=NULL)
-
-meth_filter_tile=unite(filtered.myobj_tile, destrand=TRUE)
-
-clusterSamples(meth_filter_tile, dist="correlation", method="ward", plot=TRUE)
-
-
-PCASamples(meth_filter_tile,screeplot=FALSE, adj.lim=c(0.0004,0.1),
-           scale=TRUE,center=TRUE,comp=c(1,2),transpose=TRUE,sd.filter=TRUE,
-           sd.threshold=0.5,filterByQuantile=TRUE,obj.return=FALSE)
-
-
-```
 
 
 
