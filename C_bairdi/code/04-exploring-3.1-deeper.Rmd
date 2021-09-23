@@ -11,6 +11,10 @@ output:
 library(tidyverse)
 ```
 
+```{r}
+library(stringr)
+```
+
 
 
 ```{r}
@@ -28,4 +32,11 @@ up <- read.csv("../data/uniprot-reviewed-20210901.tab", header = TRUE, sep="\t")
 
 head(up)
 ```
+```{r}
+comb <- left_join(blast, up, by =c("Accession_ID" = "Entry") )
+```
 
+
+```{r}
+comb %>% filter(str_detect(Gene.ontology..biological.process., "immune"))
+```
