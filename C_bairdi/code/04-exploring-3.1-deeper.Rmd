@@ -14,6 +14,7 @@ library(tidyverse)
 
 
 ```{r}
+
 blast <- read.csv("../data/cbai_transcriptome_v3.1.blastx.outfmt6.txt", header = FALSE, sep="\t") %>%
   separate(col = V2, into = c("sp", "Accession_ID", "Gene"), sep = "\\|")
   
