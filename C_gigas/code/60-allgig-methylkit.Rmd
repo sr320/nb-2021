@@ -84,3 +84,67 @@ myobj_all = processBismarkAln(location = file.list_allgig,
   mincov=2,
   treatment = c(0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,1,1,1,1,1,1,1,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,3,3,3,3,3,3,3,3))
 ```
+
+
+
+```{r include=FALSE}
+save(myobj_all, file = "../analyses/myobj_gall")
+```
+
+
+
+```{r include=FALSE}
+load("../analyses/myobj_oa")
+```
+
+
+```{r message=FALSE, warning=FALSE}
+filtered.myobj=filterByCoverage(myobj_all,lo.count=10,lo.perc=NULL,
+                                      hi.count=NULL,hi.perc=98)
+meth_filter=unite(filtered.myobj, min.per.group=NULL, destrand=TRUE)
+clusterSamples(meth_filter, dist="correlation", method="ward", plot=TRUE)
+PCASamples(meth_filter)
+```
+
+
+
+
+
+```{r include=FALSE}
+myDiff=calculateDiffMeth(meth_filter,mc.cores=36)
+```
+
+
+```{r include=FALSE}
+save(myDiff, file = "../analyses/myDiff_gall")
+```
+
+
+```{r include=FALSE}
+load("../analyses/myDiff_all")
+```
+
+
+
+```{r}
+# get hyper methylated bases
+myDiff_a50p.hyper=getMethylDiff(myDiff_gall,difference=50,qvalue=0.01,type="hyper")
+#
+# get hypo methylated bases
+myDiff_a50p.hypo=getMethylDiff(myDiff_gall,difference=50,qvalue=0.01,type="hypo")
+#
+#
+# get all differentially methylated bases
+myDiff_a50p=getMethylDiff(myDiff_gall,difference=50,qvalue=0.01)
+```
+
+
+
+
+```{r}
+write.table(myDiff_a50p, file = "../analyses/myDiff-gall50p.tab", sep = "\t")
+```
+
+
+
+
