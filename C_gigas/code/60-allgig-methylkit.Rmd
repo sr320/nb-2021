@@ -99,9 +99,9 @@ load("../analyses/myobj_oa")
 
 
 ```{r message=FALSE, warning=FALSE}
-filtered.myobj=filterByCoverage(myobj_all,lo.count=10,lo.perc=NULL,
-                                      hi.count=NULL,hi.perc=98)
-meth_filter=unite(filtered.myobj, min.per.group=NULL, destrand=TRUE)
+#filtered.myobj=filterByCoverage(myobj_all,lo.count=5,lo.perc=NULL,
+                                     # hi.count=NULL,hi.perc=98)
+meth_filter=unite(filtered.myobj, min.per.group=4L, destrand=TRUE, mc.cores = 12)
 clusterSamples(meth_filter, dist="correlation", method="ward", plot=TRUE)
 PCASamples(meth_filter)
 ```
@@ -128,14 +128,14 @@ load("../analyses/myDiff_all")
 
 ```{r}
 # get hyper methylated bases
-myDiff_a50p.hyper=getMethylDiff(myDiff_gall,difference=50,qvalue=0.01,type="hyper")
+myDiff_a50p.hyper=getMethylDiff(myDiff,difference=50,qvalue=0.01,type="hyper")
 #
 # get hypo methylated bases
-myDiff_a50p.hypo=getMethylDiff(myDiff_gall,difference=50,qvalue=0.01,type="hypo")
+myDiff_a50p.hypo=getMethylDiff(myDiff,difference=50,qvalue=0.01,type="hypo")
 #
 #
 # get all differentially methylated bases
-myDiff_a50p=getMethylDiff(myDiff_gall,difference=50,qvalue=0.01)
+myDiff_a50p=getMethylDiff(myDiff,difference=50,qvalue=0.01)
 ```
 
 

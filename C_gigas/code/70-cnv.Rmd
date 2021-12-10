@@ -1,0 +1,30 @@
+---
+title: "CNV"
+output: html_document
+---
+
+
+```{bash}
+/home/shared/sratoolkit.2.11.2-ubuntu64/bin/fasterq-dump --split-files SRR11962067 -O /home/shared/8TB_HDD_01/sr320/ncbi/ -e 20
+```
+```{bash}
+/home/shared/sratoolkit.2.11.2-ubuntu64/bin/fasterq-dump --split-files SRR322877 -O /home/shared/8TB_HDD_01/sr320/ncbi/ -e 20
+```
+
+
+```{bash}
+fastq-dump --split-files SRR10800475 -O /home/shared/8TB_HDD_01/sr320/ncbi/
+```
+
+
+
+```{bash}
+fastq-dump --split-files SRR10153332 -O /home/shared/8TB_HDD_01/sr320/ncbi/
+```
+
+SRR11962067
+SRR322877
+SRR10800475
+SRR10153332
+
+
